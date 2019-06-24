@@ -59,7 +59,7 @@ class OurMission extends React.Component {
               icon={<Icon type="rise"/>}>
               <h3 className="vertical-timeline-element-title">Lunching E-learning platform</h3>
               <p>
-                First version of e-learning platform will available from 10/2019
+                First version of e-learning platform will available
               </p>
             </VerticalTimelineElement>
 
