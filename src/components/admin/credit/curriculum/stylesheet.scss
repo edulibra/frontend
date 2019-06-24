@@ -1,0 +1,16 @@
+.ui-curriculum-panel {
+  display: flex;
+
+  .ui-curriculum-menu {
+    width: 300px;
+    padding: 0 20px;
+  }
+
+  .ui-curriculum-content {
+    margin: 0 auto;
+    background-color: white;
+    max-width: 1200px;
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);
+    flex-grow: 1;
+  }
+}
