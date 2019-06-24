@@ -75,7 +75,7 @@ class OurMission extends React.Component {
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              date="Q2,Q3/2010"
+              date="Q2,Q3/2020"
               iconStyle={{background: 'var(--primary-color)', color: '#fff'}}
               icon={<Icon type="wallet"/>}>
               <h3 className="vertical-timeline-element-title">Lunching the edulibra on Libra Network</h3>
