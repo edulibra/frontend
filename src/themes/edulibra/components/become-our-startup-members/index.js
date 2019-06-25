@@ -59,7 +59,7 @@ class BecomeOurStartupMembers extends React.Component {
             <ul className="sharing-detail">
               <li className="item">
                 We will give <b>20% company sharing</b> for someone who want to become a early investor.
-                <Progress percent={30}/>
+                <Progress percent={20}/>
               </li>
               <li className="item">You will get <b>stake</b> of company and the <b>ratio of edulibra token</b> in co-founder team</li>
               <li className="item">Your money will <b>only use to build the product</b></li>
