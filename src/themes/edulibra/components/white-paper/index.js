@@ -29,7 +29,7 @@ class OurMission extends React.Component {
         <div className='title-panel'>
           Now, we are focusing on how to build the product. The white paper will available soon.
           <br/>
-          Please look on our work bellow!
+          Please look on our works bellow!
         </div>
       </div>
     );
