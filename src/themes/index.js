@@ -7,7 +7,7 @@ import ThemeCodes from './register/ThemeCodes';
 class FrontendLayout extends React.Component {
   componentDidMount() {
     const { dispatch } = this.props;
-    dispatch(themeActions.setThemeDetail({code: ThemeCodes.onchaindemy}));
+    dispatch(themeActions.setThemeDetail({code: ThemeCodes.edulibra}));
   }
 
   render() {

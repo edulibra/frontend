@@ -1,0 +1,56 @@
+@media only screen and (max-width: 800px) {
+  .ui-edulibra-mission-content {
+    flex-direction: column !important;
+    .working-item {
+      width: 100% !important;
+    }
+  }
+
+}
+
+.ui-our-works {
+  max-width: 1300px;
+  margin: 0 auto;
+
+  h2.title-panel {
+    font-size: 35px;
+    color: var(--primary-color);
+    padding: 65px 40px 0px 40px;
+  }
+
+
+  .ui-edulibra-mission-content {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+
+    .working-item {
+      padding: 20px;
+      width: 40%;
+      flex-grow: 1;
+
+      .title {
+        color: var(--primary-color);
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .image-panel {
+        height: 155px;
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        width: 120px;
+      }
+
+      .school-management {
+        width: 180px;
+      }
+    }
+  }
+
+}

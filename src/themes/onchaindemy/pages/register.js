@@ -3,7 +3,7 @@ import Loadable from "react-loadable";
 import Loading from "components/common/viewers/loading";
 
 const Home = Loadable({
-  loader: () => import('./index'),
+  loader: () => import('./home'),
   loading: Loading,
 });
 

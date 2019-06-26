@@ -1,7 +1,9 @@
 import React from 'react';
 import ThemeCodes from 'themes/register/ThemeCodes'
-import PagesRegister from 'themes/onchaindemy/pages/register';
+import onChainDemyPages from 'themes/onchaindemy/pages/register';
+import edulibraPages from 'themes/edulibra/pages/register';
 
 export default {
-  [ThemeCodes.onchaindemy]: PagesRegister
+  [ThemeCodes.onchaindemy]: onChainDemyPages,
+  [ThemeCodes.edulibra]: edulibraPages
 }

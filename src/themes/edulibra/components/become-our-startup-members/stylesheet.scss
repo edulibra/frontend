@@ -1,0 +1,86 @@
+@media only screen and (max-width: 800px) {
+  .ui-edulibra-become-our-members {
+    .ui-edulibra-content {
+      flex-direction: column !important;
+    }
+
+    .sharing-desc {
+      border-left: none !important;
+    }
+    ul.sharing-detail {
+      padding: 0 !important;
+    }
+
+    .tTop {
+      display: block !important;
+      font-size: 35px !important;
+      font-weight: normal !important;
+      color: var(--primary-color);
+      padding: 30px 40px 30px 40px;
+    }
+
+    .tContent {
+      display: none !important;
+    }
+  }
+
+}
+
+.ui-edulibra-become-our-members {
+
+  max-width: 1300px;
+  margin: 0 auto 30px auto;
+
+  .tTop {
+    display: none;
+  }
+
+  .tContent {
+    display: block;
+  }
+
+  h2.title-panel {
+    font-size: 35px;
+    font-weight: 300;
+    color: var(--primary-color);
+  }
+
+
+  .ui-edulibra-content {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+
+    .sharing-stake {
+      max-width: 400px;
+    }
+  }
+
+  .ant-progress-success-bg, .ant-progress-bg {
+    background-color: #8fcfba;
+  }
+
+  .sharing-desc {
+    position: relative;
+    padding: 0 20px;
+    flex-grow: 1;
+    border-left: 2px dotted var(--primary-color);
+
+    ul.sharing-detail {
+      list-style: none;
+
+      li.item {
+        padding: 20px 0;
+        border-bottom: 1px dotted var(--primary-color);
+        color: var(--primary-color);
+        font-weight: 300;
+        font-size: 20px;
+
+        .ant-progress-outer {
+          //transform: translateY(23px);
+        }
+      }
+    }
+  }
+
+}

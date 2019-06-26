@@ -1,3 +1,4 @@
 export default {
-  onchaindemy: 'onchaindemy'
+  onchaindemy: 'onchaindemy',
+  edulibra: 'edulibra',
 };

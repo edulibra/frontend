@@ -8,6 +8,13 @@ const onchaindemy = Loadable({
   loading: Loading,
 });
 
+const edulibra = Loadable({
+  loader: () => import(/* webpackChunkName: "themes.edulibra" */ 'themes/edulibra'),
+  loading: Loading,
+});
+
+
 export default {
   [ThemeCodes.onchaindemy]: onchaindemy,
+  [ThemeCodes.edulibra]: edulibra,
 }
