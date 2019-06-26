@@ -27,7 +27,7 @@
     "validator": "^11.0.0"
   },
   "scripts": {
-    "start": "set PORT=80 && set HTTPS=true && react-app-rewired start",
+    "start": "set PORT=81 && set HTTPS=true && react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject"
