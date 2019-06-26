@@ -1,30 +1,36 @@
 import React from 'react';
-import PageConfigReader from './pages/PageConfigReader';
 import { connect } from 'react-redux';
 import themeActions from './actions';
-import THEME, { ThemeRegister } from './pages/register';
-import ThemesConfig from 'routes/pages';
+import ThemeRegister from './register/Themes';
+import ThemeCodes from './register/ThemeCodes';
 
 class FrontendLayout extends React.Component {
   componentDidMount() {
     const { dispatch } = this.props;
-    dispatch(themeActions.setThemeDetail(ThemeRegister[THEME.EDULIBRA]));
+    dispatch(themeActions.setThemeDetail({code: ThemeCodes.edulibra}));
   }
 
   render() {
     const theme = this.props.theme || {};
+
+    if(!theme || !theme.code || !ThemeRegister[theme.code]) {
+      return <div>page not found 1</div>
+    }
+
+    const Container = ThemeRegister[theme.code];
     return (
-      <PageConfigReader themeId={theme.code} config={ThemesConfig}>
+      <Container {...this.props}>
         {this.props.children}
-      </PageConfigReader>
+      </Container>
     );
   }
 }
 
 const mapStateToProps = (state) => {
   const domain = state.domain || {};
+  const theme = domain.theme || {};
   return {
-    theme: domain.theme,
+    theme,
   };
 };
 

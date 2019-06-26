@@ -1,7 +1,7 @@
 import React from 'react';
 import uuid from 'uuid/v4';
 import schema from './schema';
-import { THEME } from 'themes/pages/register';
+import ThemeCodes  from 'themes/register/ThemeCodes';
 import FormGeneration from 'schema-form/GenerateForm';
 import { Button, Steps } from 'antd';
 import { t1 } from 'i18n';
@@ -26,7 +26,7 @@ class OrgSiteRegister extends React.Component {
           hiddenFields={{
             orgIid: organization.iid,
             orgRootIid: organization.iid,
-            themeCode: THEME.ASTER,
+            themeCode: ThemeCodes.onchaindemy,
           }}
           leftSummitBtn={<Button
             className="m-r-20" type="secondary"

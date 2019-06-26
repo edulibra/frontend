@@ -1,21 +1,15 @@
 @import "../../configs/css-configuration.scss";
-@import "css-avaiable.scss";
 
 $theme-font-family: 'Open Sans', "intercom-font", "ui-header-adminHelvetica Neue", Helvetica, Arial, sans-serif;
 
-.ui-edulibra-layout {
+.ui-aster-layout {
 
   background: #ffffff !important;
 
-  .ui-edulibra-body {
-    min-height: 800px;
+  .ui-aster-body {
     img {
       max-width: 100% !important;
     }
-  }
-
-  .title {
-    font-size: 25px;
   }
 
   .ui-page-content {
@@ -27,11 +21,11 @@ $theme-font-family: 'Open Sans', "intercom-font", "ui-header-adminHelvetica Neue
     padding: 0;
   }
 
-  .ui-edulibra-header {
+  .ui-aster-header {
     height: auto !important;
   }
 
-  .ui-edulibra-home-item {
+  .ui-aster-home-item {
     max-width: 1200px;
     display: flex;
     margin: 0 auto;

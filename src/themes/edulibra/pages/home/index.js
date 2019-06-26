@@ -6,6 +6,8 @@ import OurWorks from '../../components/our-works';
 import BecomeOurStartupMembers from '../../components/become-our-startup-members';
 import background from 'themes/edulibra/assets/images/homebg.jpg';
 import './stylesheet.scss';
+import JsonData from 'themes/edulibra/pages/common/ParticlesConfig';
+import Particles from 'react-particles-js';
 import ImageBackGround from 'components/common/viewers/image-background';
 import logo from "../../assets/svg/logo.svg";
 import Loadable from "react-loadable";
@@ -24,6 +26,8 @@ class AsterLayout extends React.Component {
         <div className="ui-home-banner">
           <ImageBackGround src={background} height={600}>
             <MenuPanel/>
+            <Particles  params={JsonData} />
+
             <div className="home-ads">
               <div>
                 <h1 className="title">

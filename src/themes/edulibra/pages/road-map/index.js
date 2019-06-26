@@ -10,6 +10,8 @@ import ImageBackGround from 'components/common/viewers/image-background';
 import logo from "../../assets/svg/logo.svg";
 import Loadable from "react-loadable";
 import Loading from "../../../../components/common/viewers/loading";
+import Particles from "react-particles-js";
+import JsonData from "../common/ParticlesConfig";
 
 const RoadmapComponent = Loadable({
   loader: () => import(/* webpackChunkName: "edulibra.Roadmap" */ 'themes/edulibra/components/roadmap'),
@@ -24,6 +26,7 @@ class Roadmap extends React.Component {
         <div className="ui-home-banner">
           <ImageBackGround src={roadmapImg} height={300}>
             <MenuPanel/>
+            <Particles  params={JsonData} />
             <div className="home-ads">
               <div>
                 <h1 className="title">
