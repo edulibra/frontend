@@ -8,6 +8,8 @@ import WhitePaper from '../../components/white-paper';
 import roadmapImg from 'themes/edulibra/assets/images/roadmap.jpg';
 import './stylesheet.scss';
 import ImageBackGround from 'components/common/viewers/image-background';
+import Particles from "react-particles-js";
+import JsonData from "../common/ParticlesConfig";
 
 class WhitePaperPage extends React.Component {
 
@@ -17,6 +19,7 @@ class WhitePaperPage extends React.Component {
         <div className="ui-white-paper-banner">
           <ImageBackGround src={roadmapImg} height={300}>
             <MenuPanel/>
+            <Particles  params={JsonData} />
             <div className="home-ads">
               <div>
                 <h1 className="title">

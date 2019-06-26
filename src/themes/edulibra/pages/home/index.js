@@ -6,7 +6,7 @@ import OurWorks from '../../components/our-works';
 import BecomeOurStartupMembers from '../../components/become-our-startup-members';
 import background from 'themes/edulibra/assets/images/homebg.jpg';
 import './stylesheet.scss';
-import JsonData from './ParticlesConfig';
+import JsonData from 'themes/edulibra/pages/common/ParticlesConfig';
 import Particles from 'react-particles-js';
 import ImageBackGround from 'components/common/viewers/image-background';
 import logo from "../../assets/svg/logo.svg";
