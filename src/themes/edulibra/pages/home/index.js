@@ -2,7 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import MenuPanel from '../../components/menu-panel';
 import ContactUs from '../../components/contact-us';
-import OurWorks from '../../components/our-works';
+import Partners from 'themes/edulibra/components/partners';
+import OurWorks from 'themes/edulibra/components/our-works';
 import BecomeOurStartupMembers from '../../components/become-our-startup-members';
 import background from 'themes/edulibra/assets/images/homebg.jpg';
 import './stylesheet.scss';
@@ -26,7 +27,7 @@ class AsterLayout extends React.Component {
         <div className="ui-home-banner">
           <ImageBackGround src={background} height={600}>
             <MenuPanel/>
-            <Particles  params={JsonData} />
+            <Particles params={JsonData}/>
 
             <div className="home-ads">
               <div>
@@ -52,6 +53,7 @@ class AsterLayout extends React.Component {
         <OurWorks/>
         <Roadmap/>
         <BecomeOurStartupMembers/>
+        <Partners/>
         <ContactUs/>
       </div>
     );

@@ -1,13 +1,15 @@
 import React from 'react';
 import actionCommon from 'action-creators/common';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { t1 } from 'i18n';
-import { Icon, Drawer } from 'antd';
+import {connect} from 'react-redux';
+import {t1} from 'i18n';
+import {Icon, Drawer} from 'antd';
 import './stylesheet.scss';
-import { history } from 'store';
+import {history} from 'store';
 import Menu from '../../../layouts/common/menu';
+import Layout from "antd/lib/layout";
 
+const {Header, Content, Footer, Sider} = Layout;
 
 class OverlayHelper extends React.Component {
   constructor(props) {
@@ -33,10 +35,10 @@ class OverlayHelper extends React.Component {
   }
 
   onClickNewButton = () => {
-    const { onClick, dispatch, url, endpoint } = this.props;
+    const {onClick, dispatch, url, endpoint} = this.props;
 
     const viewId = this.props.viewId || 'default';
-    dispatch(actionCommon.setStatusOfFormView({ viewId, display: true }));
+    dispatch(actionCommon.setStatusOfFormView({viewId, display: true}));
     if (url || endpoint) {
       history.push(url || endpoint);
     }
@@ -47,10 +49,10 @@ class OverlayHelper extends React.Component {
   }
 
   onClose = (viewIdDefault) => {
-    const { dispatch, returnUrlOnClosed, showFormView } = this.props;
+    const {dispatch, returnUrlOnClosed, showFormView} = this.props;
     const viewId = this.props.viewId || viewIdDefault || 'default';
     if (showFormView[viewId] && showFormView[viewId].display) {
-      dispatch(actionCommon.setStatusOfFormView({ viewId, display: false, title: '' }));
+      dispatch(actionCommon.setStatusOfFormView({viewId, display: false, title: ''}));
     }
     if (returnUrlOnClosed) {
       history.push(returnUrlOnClosed);
@@ -60,11 +62,11 @@ class OverlayHelper extends React.Component {
   }
 
   getHeight = () => {
-    const { placement } = this.props;
+    const {placement} = this.props;
   }
 
   getNewRoute = () => {
-    const { route, newUrl } = this.props;
+    const {route, newUrl} = this.props;
     if (!route || !route.routes || route.routes.length === 0) {
       return {};
     }
@@ -77,42 +79,56 @@ class OverlayHelper extends React.Component {
   }
 
   render() {
-    const { status, title, hideNewButton, newUrl, menuSchema, activeMenu } = this.props;
+    const {status, title, hideNewButton, newUrl, menuSchema, className, backIcon, route} = this.props;
     const placement = this.props.placement || 'top';
     const newRoute = this.getNewRoute();
     const titlePanel =
       (<div className="ui-header-popup-screen">
         <div className="ui-title">
+          {backIcon && <div onClick={this.onClose} className='ui-back-icon'>{backIcon} {t1('back')} </div>}
           {title}
-          {(history.location.pathname === newRoute.path) ? t1('create new') : ''}
+          {(history.location.pathname === newRoute.path) ? (newRoute.title || t1('create new')) : ''}
         </div>
-        {(history.location.pathname !== newRoute.path) &&
-        <Menu
-          selectedKeys={[history.location.pathname]}
-          className="ui-popup-screen-menu"
-          mode="horizontal"
-          schema={menuSchema}
-        />
-        }
+        {/*{(history.location.pathname !== newRoute.path) &&*/}
+        {/*<Menu*/}
+        {/*selectedKeys={[history.location.pathname]}*/}
+        {/*className="ui-popup-screen-menu"*/}
+        {/*mode="horizontal"*/}
+        {/*schema={menuSchema}*/}
+        {/*/>*/}
+        {/*}*/}
       </div>);
+
     return (
-      <div className="ui-new-panel">
-        <div className="ui-button" style={{ display: (hideNewButton !== true) ? 'block' : 'none' }}>
-          <Icon onClick={this.onClickNewButton} type="plus-circle" className="new-icon" />
+      <div className={`ui-new-panel`}>
+        <div className="ui-button" style={{display: (hideNewButton !== true) ? 'block' : 'none'}}>
+          <Icon onClick={this.onClickNewButton} type="plus-circle" className="new-icon"/>
         </div>
         <Drawer
-          className={`ui-drawer-${placement} ui-drawer-panel`}
+          className={`ui-drawer-${placement} ${className} ui-drawer-panel`}
           placement={placement}
           title={titlePanel}
           closable
           onClose={this.onClose}
-          visible={status}
-        >
+          visible={status}>
+          <Layout>
+            <Content className="ui-custom-drawer-body">
+              <div className='ui-drawer-menu-left'>
+                {(history.location.pathname !== newRoute.path) &&
+                <Menu
+                  selectedKeys={[history.location.pathname]}
+                  className="ui-popup-screen-menu"
+                  mode="inline"
+                  schema={menuSchema}
+                />
+                }
+              </div>
 
-          <div className="ui-custom-drawer-body">
-            {this.props.children}
-          </div>
-
+              <div className='ui-drawer-content'>
+                {this.props.children}
+              </div>
+            </Content>
+          </Layout>
         </Drawer>
       </div>
 
@@ -122,8 +138,10 @@ class OverlayHelper extends React.Component {
 
 OverlayHelper.propTypes = {
   onClick: PropTypes.func,
+  backIcon: PropTypes.any,
   hideNewButton: PropTypes.bool,
   placement: PropTypes.string,
+  className: PropTypes.string,
   url: PropTypes.string,
   endpoint: PropTypes.string,
   viewId: PropTypes.string,

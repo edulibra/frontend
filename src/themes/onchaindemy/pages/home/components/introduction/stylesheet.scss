@@ -1,0 +1,19 @@
+.ui-introduction {
+  padding: 30px 20px;
+  margin: 0 auto;
+
+  h2.title {
+    font-size: 40px;
+    font-weight: 300;
+    font-family: Raleway;
+    line-height: 4.5rem;
+    color: var(--primary-color);
+    text-align: center;
+  }
+  p {
+    max-width: 900px;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}

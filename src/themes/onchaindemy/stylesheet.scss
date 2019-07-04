@@ -1,12 +1,68 @@
-@import "../../configs/css-configuration.scss";
+@import "css-avaiable";
+
 
 $theme-font-family: 'Open Sans', "intercom-font", "ui-header-adminHelvetica Neue", Helvetica, Arial, sans-serif;
 
-.ui-aster-layout {
+.register_or_login_drawer {
+  .ant-drawer-content-wrapper {
+    height: 100% !important;
+  }
+}
 
+
+.ui-onchanedemy-drawer {
+  .ant-drawer-content-wrapper {
+    background: white;
+
+    .ui-custom-drawer-body {
+      background: white;
+    }
+
+    .ant-drawer-content {
+      background: white;
+
+      .ant-drawer-wrapper-body {
+        .ant-drawer-header {
+          .ui-title {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+
+            .ui-back-icon {
+              position: absolute;
+              opacity: 0.8;
+              left: 0;
+              cursor: pointer;
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+
+          background: var(--primary-color);
+          border-radius: 0;
+
+          .ant-drawer-title {
+            color: white;
+          }
+
+          .ant-drawer-close {
+            color: white;
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+.ui-onchaindemy-layout {
+  font-size: 14px;
   background: #ffffff !important;
 
-  .ui-aster-body {
+  .ui-onchaindemy-body {
     img {
       max-width: 100% !important;
     }
@@ -21,12 +77,11 @@ $theme-font-family: 'Open Sans', "intercom-font", "ui-header-adminHelvetica Neue
     padding: 0;
   }
 
-  .ui-aster-header {
+  .ui-onchaindemy-header {
     height: auto !important;
   }
 
-  .ui-aster-home-item {
-    max-width: 1200px;
+  .ui-onchaindemy-home-item {
     display: flex;
     margin: 0 auto;
     align-items: center;

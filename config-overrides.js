@@ -8,6 +8,7 @@ module.exports = override(
     javascriptEnabled: true,
     modifyVars: {
       '@primary-color': '#42318c', // primary color for all components
+      '@secondary-color': '#42318c', // primary color for all components
       '@link-color': '#3d2d83', // link color
       '@success-color': '#52c41a', // success state color
       '@warning-color': '#faad14', // warning state color

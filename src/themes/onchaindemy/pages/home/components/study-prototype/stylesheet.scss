@@ -1,0 +1,25 @@
+.ui-home-prototype {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  //height: 600px;
+  .ui-bg-color {
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    z-index: 0;
+  }
+
+  .image-panel {
+    margin: 0 auto;
+    display: block;
+    z-index: 1;
+    .ui-mobile-prototype {
+      position: absolute;
+      right: 30px;
+      max-height: 100%;
+      bottom: 0px;
+    }
+  }
+}

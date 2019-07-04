@@ -1,9 +1,13 @@
 import React from 'react';
 import Layout from 'antd/lib/layout';
-import { connect } from 'react-redux';
+import PageFooter from 'themes/onchaindemy/components/footer';
+import {connect} from 'react-redux';
+import UserLogin from './pages/user-login-register';
+import {Icon} from 'antd';
+import OverlayHelper from "../../schema-form/helper/overlay-helper";
 import './stylesheet.scss';
 
-const { Header, Content, Footer, Sider } = Layout;
+const {Header, Content, Footer, Sider} = Layout;
 
 class CashRent extends React.Component {
 
@@ -12,19 +16,24 @@ class CashRent extends React.Component {
   }
 
   render() {
-    const { themeId, route } = this.props;
+    const {themeId, route} = this.props;
 
     return (
-      <Layout className="ui-aster-layout">
-        <Header className="ui-aster-header">
-          header
-        </Header>
-        <Content className="ui-aster-body">
+      <Layout className="ui-onchaindemy-layout">
+        {/*<Header className="ui-onchaindemy-header">*/}
+        {/*<TopMenu/>*/}
+        {/*</Header>*/}
+        <Content className="ui-onchaindemy-body">
           {this.props.children}
         </Content>
         <Footer>
-         footer
+          <PageFooter/>
         </Footer>
+
+        <OverlayHelper backIcon={<Icon type="rollback"/>} className='ui-user-login-register'
+                       viewId='register_or_login_drawer ui-onchanedemy-drawer' hideNewButton={true}>
+          <UserLogin/>
+        </OverlayHelper>
       </Layout>
     );
   }
