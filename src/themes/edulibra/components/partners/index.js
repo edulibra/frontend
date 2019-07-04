@@ -16,13 +16,17 @@ class Partners extends React.Component {
         <h6 className='title-panel'>Strategic partnership</h6>
         <ul className="partner-list">
           <li className='item'>
-            <img src={libra}/>
+            <a href='https://libra.org/en-US/' target='_blank'>
+              <img src={libra}/>
+            </a>
           </li>
           <li className='item'>
             <img src={UdemyLogo}/>
           </li>
           <li className='item china'>
-            <img src={LibraChina}/>
+            <a href='https://libra-china.org/' target='_blank'>
+              <img src={LibraChina}/>
+            </a>
           </li>
         </ul>
       </div>
