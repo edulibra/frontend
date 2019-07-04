@@ -1,0 +1,20 @@
+.ui-onchaindemy-logo {
+  position: relative;
+  max-width: 100% !important;
+
+  .edulibra_logo {
+    filter: brightness(0) invert(1);
+
+  }
+
+  .libra_logo {
+    filter: brightness(0) invert(1);
+    position: absolute;
+    top: -3%;
+    left: 113%;
+    width: 70%;
+    height: 70%;
+    opacity: 0.2;
+    transform: translateY(40%) translateX(-70%);
+  }
+}

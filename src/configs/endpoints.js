@@ -20,6 +20,10 @@ export default {
     delete: `${prefix}/syllabus/delete`,
     update: `${prefix}/syllabus/update`,
   },
+  course: {
+    detail: `${prefix}/course/detail`,
+    find: `${prefix}/course/find`,
+  },
   organization: {
     new: `${prefix}/organization/new`,
     search: `${prefix}/organization/search`,

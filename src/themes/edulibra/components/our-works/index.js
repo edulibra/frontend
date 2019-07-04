@@ -21,11 +21,12 @@ const Item = ({title, icon, discription, imageClass}) => (
   </div>
 )
 
-class OurMission extends React.Component {
+class OurWorks extends React.Component {
 
   render() {
+    const {className} = this.props;
     return (
-      <div className="ui-our-works">
+      <div className={`ui-our-works ${className}`}>
 
         <h2 className='title-panel'> {t1('our works')}: </h2>
         <div className='ui-edulibra-mission-content'>
@@ -64,5 +65,5 @@ class OurMission extends React.Component {
   }
 }
 
-export default OurMission;
+export default OurWorks;
 

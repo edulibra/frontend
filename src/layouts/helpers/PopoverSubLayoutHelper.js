@@ -5,6 +5,7 @@ import connect from 'react-redux/es/connect/connect';
 import actionCommon from 'action-creators/common';
 import { matchRoutes, renderRoutes } from 'react-router-config';
 import { getSubRoutes } from './common';
+import {Icon} from "antd";
 
 class PopoverSubLayoutHelper extends React.PureComponent {
 
@@ -84,7 +85,13 @@ class PopoverSubLayoutHelper extends React.PureComponent {
     return (
       <div>
         {DefaultComponent && <DefaultComponent {...this.props} />}
-        <OverlayHelper viewId={popupScreenId} route={route} returnUrlOnClosed={route.path} url={newUrl} hideNewButton={hideNewButton}>
+        <OverlayHelper viewId={popupScreenId}
+                       backIcon={<Icon type="rollback"/>}
+                       className='ui-onchanedemy-drawer'
+                       route={route}
+                       returnUrlOnClosed={route.path}
+                       url={newUrl}
+                       hideNewButton={hideNewButton}>
           {renderRoutes(subRoutes)}
         </OverlayHelper>
       </div>

@@ -1,0 +1,75 @@
+.ui-home-banner {
+  background-color: var(--primary-color);
+  height: 600px;
+  padding-bottom: 60px;
+
+  .ui-onchaindemy-logo {
+    width: 45px;
+  }
+
+  .ui-content-home-banner {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+
+    .big-title {
+      margin: 120px 0 20px 0;
+      font-size: 72px;
+      font-weight: 100;
+      font-family: Raleway;
+      line-height: 4.5rem;
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .advertising {
+      justify-content: center;
+      text-align: center;
+      color: white;
+      font-family: Raleway;
+      opacity: 0.8;
+      font-weight: 300;
+      margin-bottom: 30px;
+      font-size: 25px;
+    }
+
+    .action-panel {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+
+      .btn {
+        background-color: #dde6ed;
+        color: var(--primary-color);
+        margin-right: 10px;
+      }
+    }
+
+    .home-search-panel {
+      display: flex;
+      justify-content: center;
+
+      .search-input {
+        margin: 0 auto;
+
+        input, button {
+          height: 49px;
+        }
+
+        .ant-btn-primary {
+          opacity: 0.8;
+        }
+
+        input {
+          color: var(--primary-color);
+        }
+      }
+    }
+
+
+  }
+
+}

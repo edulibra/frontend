@@ -1,0 +1,160 @@
+
+.ui-onchaindemy-top-menu {
+  //height: 64px;
+  line-height: 24px;
+  width: 100%;
+  min-height: 3.5px;
+  padding: 10px 0px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+
+  .content {
+    padding: var(--screen-padding-size);
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+
+    .ui-logo {
+
+      font-size: 42px;
+      font-weight: 500;
+      color: white;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+    }
+
+    .pc-normal-header {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .user-login-register {
+      .get-start {
+        background-color: white;
+        color: var(--primary-color);
+        margin-right: 10px;
+      }
+    }
+
+    .ui-header-menu {
+      color: #ffffff;
+      font-size: 16px;
+      //text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+      //0px 8px 13px rgba(0,0,0,0.1),
+      //0px 18px 23px rgba(0,0,0,0.1);
+      border-bottom: none !important;
+
+      .ant-menu-horizontal {
+        border-bottom: none !important;
+      }
+    }
+  }
+
+
+  @media only screen and (max-width: 900px) {
+    .ui-desktop-header {
+      display: none !important;
+    }
+
+    .ui-mobile-header {
+      display: flex !important;
+
+      .ui-logo {
+        flex-grow: 1;
+        max-height: 55px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .top-mobile-menu {
+        font-size: 18px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 900px) {
+    .ui-desktop-header {
+      display: flex !important;
+    }
+    .ui-mobile-header {
+      display: none !important;
+    }
+  }
+
+}
+
+.ui-desktop-header {
+  .ui-contact {
+    .ui-logo {
+      display: none !important;
+    }
+  }
+}
+
+//@media only screen and (min-width: 900px) {
+
+
+.ui-onchaindemy-mobile-menu {
+  display: block !important;
+
+  .ui-logo {
+    max-height: 55px;
+    overflow: hidden;
+
+  }
+
+  font-size: 12px;
+
+  .ant-drawer-content {
+    overflow: scroll !important;
+  }
+
+
+  .ant-drawer-wrapper-body {
+    position: relative;
+    padding-top: 57px;
+
+    .ant-drawer-body {
+      padding: 20px 24px 24px 24px;
+    }
+
+    .ant-drawer-header {
+      position: fixed;
+      padding: 1px 24px 1px 10px !important;
+      width: 100%;
+      z-index: 1;
+      top: 0;
+      border-radius: 0 !important;
+      background: #1a1c27;
+
+      .ant-drawer-title {
+        color: #a1b1bc !important;
+
+      }
+
+      .anticon-close {
+        color: #ffffff !important;
+      }
+    }
+  }
+
+
+  .ant-drawer-content-wrapper {
+    height: 80% !important;
+  }
+
+}
+
+.ant-menu-inline {
+  border: none;
+}
+
+//}

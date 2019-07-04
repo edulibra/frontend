@@ -1,0 +1,25 @@
+.ui-onchaindemy-for-school {
+
+  .ui-present-idea {
+    display: flex;
+    max-width: 1300px;
+    padding: 50px 20px;
+    margin: 0 auto;
+
+    .present-title {
+
+      font-size: 35px;
+      color: var(--primary-color);
+    }
+
+    .ui-left-present {
+      width: 50%;
+    }
+
+    .ui-right-present {
+      width: 50%;
+      justify-content: right;
+      text-align: right;
+    }
+  }
+}

@@ -69,6 +69,7 @@ export const getItemStyle = (isDragging, draggableStyle, grid = 8) => ({
   padding: grid, //* 2
   margin: `${grid}px`,
   border: '1px solid #cccccc',
+  borderRadius: '5px',
   // height: 30,
 
   // change background colour if dragging
@@ -85,6 +86,7 @@ export const getListStyle = (isDraggingOver, overflow, grid = 8) => ({
   // maxHeight: '50vh',
   overflow,
   minHeight: '20px',
+
 });
 
 /**

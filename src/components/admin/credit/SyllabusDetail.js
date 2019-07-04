@@ -14,11 +14,11 @@ class SyllabusDetail extends React.PureComponent {
 
   constructor(props) {
     super(props);
+    this.state = {};
   }
 
   componentWillMount = async () => {
    const syllabus = await fetchNode(node);
-   console.log(syllabus);
    this.setState({syllabus})
   }
 

@@ -8,7 +8,7 @@ import topMenuSchema from '../menu/top-menu';
 import './stylesheet.scss';
 import Menu from 'layouts/common/menu';
 import {history} from 'store';
-import FetchNode from 'common/FetchNodeHigherComponent';
+import FetchNode from 'common/FetchData';
 import LectureMaterialSchema from './LectureMaterialSchema';
 import menuSchema from 'layouts/admin/menu-left/menu-schema';
 import FormGeneration from "../../../../schema-form/GenerateForm";
@@ -36,8 +36,7 @@ class Curriculum extends React.PureComponent {
             lectureMaterialTypes={this.props.lectureMaterialTypes}
             hostedTypes={this.props.hostedTypes}
             nodes={this.props.documentData.learningMaterials}
-            schema={LectureMaterialSchema}
-          />
+            schema={LectureMaterialSchema}/>
         </div>
       </div>
     );

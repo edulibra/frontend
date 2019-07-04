@@ -86,7 +86,7 @@ class SForm extends React.Component {
             }
             {
               !confirmBeforeSummit &&
-              <Button ref="summitButton" type="primary" onClick={this.onSummitForm}>{submitLabel}</Button>
+              <Button ref="summitButton" className='summit-btn' type="primary" onClick={this.onSummitForm}>{submitLabel}</Button>
             }
             {
               rightSummitBtn

@@ -93,7 +93,7 @@ class GenerateForm extends React.Component {
       this.addDefaultDataToCustomElementForm(itemProps);
 
       if (!item.name || item.type === 'view') {
-        children.push(<item.component key={uuid()} {...itemProps} />);
+        children.push(<item.component key={uuid()} size={'large'} {...itemProps} />);
         return;
       }
 
@@ -117,7 +117,7 @@ class GenerateForm extends React.Component {
             label={item.label}
           >
             {getFieldDecorator(`${item.name}`, { ...decorator })(
-              <item.component {...itemProps} />,
+              <item.component size={'large'} {...itemProps} />,
             )}
           </FormItem>
         </Col>,

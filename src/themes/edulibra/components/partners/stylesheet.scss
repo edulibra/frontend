@@ -1,0 +1,56 @@
+.edulibra-ui-partners {
+
+  @media only screen and (max-width: 800px) {
+    .title-panel {
+      font-size: 22px !important;
+      padding: 45px 40px 0px 40px !important;
+    }
+    .partner-list {
+      .item {
+        height: 80px !important;
+      }
+    }
+
+  }
+
+  .title-panel {
+    max-width: 1300px;
+    font-size: 35px;
+    margin: 0 auto;
+    color: var(--primary-color);
+    padding: 65px 40px 0px 40px;
+  }
+
+  .partner-list {
+    max-width: 1300px;
+    padding: 0px 40px 0px 40px;
+    margin: 50px auto;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .item {
+      border-radius: 4px;
+      box-shadow: 0 0 17px 0 rgba(202, 183, 183, .5);
+      background-color: #fff;
+      margin: 10px;
+      width: 30%;
+      height: 180px;
+      overflow: hidden;
+      flex-grow: 1;
+      padding: 20px;
+      justify-content: center;
+      text-align: center;
+
+      &.china {
+        background-color: #353689;
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+}

@@ -35,10 +35,9 @@ export default (($this) => {
       colSpan: 24,
       decoratorOption: { rules: [{ required: true, message: t1('Password is required!') }] },
       validator: Validators.passwordValidator,
-      component: Input,
+      component: Input.Password,
       componentProps: {
         placeholder: t1('Your password'),
-        type: 'password',
         prefix: <Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />,
       },
     },

@@ -22,10 +22,9 @@ const data = {
     'Investors',
     'Advisor',
     'Founders',
-
   ],
   datasets: [{
-    data: [40, 8, 52],
+    data: [20, 8, 72],
     backgroundColor: [
       '#8fcfba',
       '#FFCE56',
@@ -58,7 +57,7 @@ class BecomeOurStartupMembers extends React.Component {
             <h2 className='title-panel tContent'> {t1('Become our co-founders')}: </h2>
             <ul className="sharing-detail">
               <li className="item">
-                We will give <b>20% company sharing</b> for someone who want to become a early investor.
+                We will give <b>20% company sharing</b> for someone who want to become a early investors.
                 <Progress percent={20}/>
               </li>
               <li className="item">You will get <b>stake</b> of company and the <b>ratio of edulibra token</b> in co-founder team</li>

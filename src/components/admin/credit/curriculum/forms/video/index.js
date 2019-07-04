@@ -59,7 +59,7 @@ export default (($this, currentType) => {
     {
       name: 'uploadVideo',
       colSpan: 24,
-      hidden: hostedType !== (hostedTypes && hostedTypes.localCDN.value),
+      hidden: hostedType !== (hostedTypes && hostedTypes.localCDN && hostedTypes.localCDN.value),
       decoratorOption: {
         rules: [{ required: true, message: t1(`${currentType.label} code is required`) }],
       },
